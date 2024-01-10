@@ -1,36 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project 3</title>
+        <!-- favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./assets/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="./assets/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- link font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+        <!-- link AOS -->
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <!-- style, reset and animate css-->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/animate.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container container">
+                <!-- logo -->
+                <div class="header__home-page">
+                    <a href="#">
+                        <img
+                            src="./assets/img/header__logo.png"
+                            alt="Besnik."
+                            class="header__logo"
+                        />
+                    </a>
+                </div>
 
-</head>
-<body>
-    
-</body>
+                <!-- navbar -->
+                <nav class="header__navbar">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item nav__item--active">
+                            <a href="#!" class="link">Home</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#!" class="link">Features</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#!" class="link">Pricing</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#!" class="link">About</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#!" class="link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- action -->
+                <div class="header__btn-group">
+                    <a class="btn btn__sign-in">Sign in</a>
+                    <button class="btn btn__sign-up">Sign up</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- Hero -->
+            <section class="hero">
+                <div class="hero__container container">
+                    <div class="hero__intro">
+                        <p class="hero__desc">😎 EASY LEAENING PLATFORM</p>
+                        <div class="hero__title">Words learner come here.</div>
+                        <div class="hero__benefit">
+                            Build skills with courses, certificates, and get
+                            online knowledge from our
+                            <span class="word">world-class</span> platform.
+                        </div>
+                        <div class="hero__link">
+                            <button class="btn hero__get-started">
+                                Get Started
+                            </button>
+                            <button class="hero__play">
+                                <svg
+                                    width="14"
+                                    height="18"
+                                    viewBox="0 0 14 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M14 9L0 0V18L14 9Z"
+                                        fill="currentColor"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero__media">
+                        <img
+                            src="./assets/img/hero__img.jpg"
+                            alt="Words learner come here."
+                            class="hero__thumb"
+                        />
+                        <div class="hero__courses">
+                            <img
+                                src="./assets/img/hero__book.svg"
+                                alt=""
+                                class="icon hero__icon"
+                            />
+                            <strong class="hero__course-sold">
+                                Courses 1000+
+                            </strong>
+                        </div>
+                        <div class="hero__schedules">
+                            <span> Schedules </span>
+                        </div>
+                        <div class="hero__students"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+
+        <!-- CDN AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- init AOS -->
+        <script>
+            AOS.init();
+        </script>
+        <!-- CDN WowJS -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+            integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- init WowJS -->
+        <script>
+            new WOW().init();
+        </script>
+    </body>
 </html>
