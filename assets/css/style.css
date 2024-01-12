@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primarycolor: #0d1111;
+    --color-detail-desc: #9da6a5;
+    --light-blue: #1ebfc1;
+    --color-nav-item: #2f3a3b;
+    --color-general-desc: #767e7e;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -15,24 +23,235 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 button {
+    font-size: 1.6rem;
     outline: none;
     border: none;
     background-color: transparent;
 }
 
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
 .line__clamp {
     display: -webkit-box;
-    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-line-clamp: var(--line-clamp, 3);
     -webkit-box-orient: vertical;
     overflow: hidden;
     word-break: break-all;
 }
 
+.btn {
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.6rem;
+    height: 50px;
+    line-height: 1.5;
+}
+
 .container {
     width: 1170px;
-    min-width: calc(100% - 48px);
+    max-width: calc(100% - 48px);
     margin: 0 auto;
+}
+
+.header {
+    position: sticky;
+    top: -24px;
+    left: 0;
+    z-index: 9999;
+    background: #fff;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 0 8px;
+}
+
+.header__home-page {
+    display: inline-block;
+    max-width: 127px;
+}
+
+.header__nav-list {
+    display: flex;
+    column-gap: 40px;
+}
+
+.header__nav-item {
+    color: var(--color-nav-item);
+    transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+}
+
+.header__nav-item .link {
+    font-size: 1.6rem;
+    padding: 20px 0px;
+    box-sizing: border-box;
+}
+
+.header__nav-item:hover,
+.nav__item--active {
+    color: var(--light-blue);
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.nav__item--active {
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.header__btn-group {
+    display: inherit;
+    align-items: center;
+}
+
+.btn__sign-in {
+    display: inline-block;
+    margin-right: 1.2rem;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.btn__sign-up {
+    font-weight: 600;
+    color: var(--light-blue);
+    padding: 12px 24px;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+}
+
+/* Hero */
+
+.hero {
+    margin-top: 30px;
+    padding: 20px 0px 40px;
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+}
+
+.hero__intro {
+    max-width: 39.15%;
+    margin-right: 6%;
+}
+
+.hero__desc {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-general-desc);
+}
+
+.hero__title {
+    width: 100%;
+    margin-top: 18px;
+    font-size: 6.2rem;
+    font-weight: 700;
+    line-height: 1.61;
+    color: var(--primarycolor);
+}
+
+.hero__benefit {
+    max-width: 81.66%;
+    margin-top: 46px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.78;
+    color: var(--color-detail-desc);
+}
+
+.hero__benefit .word {
+    white-space: nowrap;
+}
+
+.hero__link {
+    margin-top: 52px;
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.hero__link a {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hero__get-started {
+    width: 186px;
+    height: 68px;
+    border-radius: 14px;
+    background-color: var(--light-blue);
+    border: 1px solid currentColor;
+    color: #fff;
+    transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
+        border 0.5s ease-in-out;
+}
+
+.hero__get-started:hover {
+    color: var(--light-blue);
+    background: #fff;
+}
+
+.hero__play {
+    display: inline-block;
+    width: 62px;
+    height: 62px;
+    color: var(--light-blue);
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1);
+    transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
+        border 0.5s ease-in-out;
+}
+
+.hero__play:hover {
+    color: #fff;
+    background: var(--light-blue);
+    border: transparent;
+}
+
+.hero__media {
+    position: relative;
+    width: 55%;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--primarycolor);
+}
+
+.hero__courses {
+    position: absolute;
+    top: 25.87%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 25px;
+    translate: -25.48% 0;
+    max-width: 157px;
+    background: #fefefd;
+    border-radius: 18px;
+    box-shadow: 0px 10px 80px 0px rgba(0, 0, 0, 0.05);
+}
+
+.hero__icon {
+    width: auto;
+}
+
+.hero__course-sold {
+    flex: 1;
+    word-wrap: break-word;
+}
+
+.hero__schedules {
+    
 }
